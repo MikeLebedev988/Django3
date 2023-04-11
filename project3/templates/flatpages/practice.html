@@ -1,32 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Bare - Start Bootstrap Template</title>
+
+    {% load static %}
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
 </head>
 <body>
-<p><span style="background-color: #339966;">Привет!</span></p>
-<p><span style="color: #00ff00;">Меня зовут Михаил Лебедев.</span></p>
-<p style="text-align: justify;"><strong>И сегодня я хочу Вам</strong> <em>представить свою</em> <span style="text-decoration: underline;">мотивационную</span> <em><strong>модель</strong></em> <span style="text-decoration: underline;"><em>каждодневного</em></span> <strong><span style="text-decoration: underline;">выполения</span></strong> <span style="text-decoration: underline;"><em><strong>рутинных операций</strong></em></span> и как не сдохнуть от постоянного пересиливания себя.</p>
-<hr />
-<p>18:26:06</p>
-<p>2023-04-10</p>
-<table style="width: 338px; height: 146px;">
-<tbody>
-<tr>
-<td style="width: 99.9062px;">2) Во-вторых.</td>
-<td style="width: 107.031px;">&nbsp;</td>
-<td style="width: 109.062px;">&nbsp;</td>
-</tr>
-<tr>
-<td style="width: 99.9062px;">3) В-третьих.</td>
-<td style="width: 107.031px;">&nbsp;</td>
-<td style="width: 109.062px;">&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<p style="text-align: justify;">&nbsp;</p>
-<p style="text-align: justify;">&nbsp;</p>
-<p style="text-align: justify;">и т.д.</p>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+   <div class="container">
+       <a class="navbar-brand" href="#">Django flatpages</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse"
+               data-target="#navbarResponsive"
+               aria-controls="navbarResponsive" aria-expanded="false"
+               aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarResponsive">
+           <ul class="navbar-nav ml-auto">
+               <li class="nav-item active">
+                   <a class="nav-link" href="#">Home
+                       <span class="sr-only">(current)</span>
+                   </a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="/about/">About</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="/contacts/">Contact</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="/practice/">Practice</a>
+               </li>
+           </ul>
+       </div>
+   </div>
+</nav>
+<!-- Page content-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-left">
+            {{ flatpage.content }}
+            {{ flatpage.content }}
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
